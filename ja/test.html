@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <h1 data-gettext>Hi</h1>
+        <p>
+            <span data-gettext>Welcome</span><br/>
+            <span data-gettext="1,1">There is %1 apple and %2 banana</span>
+            <span data-gettext="数十, 数百">There is %1 apple and %2 banana</span>
+            <span data-ngettext="There are %1 apples, 2">There is %1 apple</span>
+            <span data-ngettext="There are %1 apples, 1">There is %1 apple</span>
+        </p>
+    </main>
+    <script type="module">
+        import Gettext from "../lib/gettext.js";
+        let i18n = new Gettext();console.log(i18n);console.log(Gettext);
+        let _ = (msgid, arg1, arg2, arg3, arg4, arg5)=>{return i18n.gettext(msgid, arg1, arg2, arg3, arg4, arg5);};
+        let _n = (msgid, msgid_plural, arg1, arg2, arg3, arg4, arg5)=>{return i18n._n(msgid, msgid_plural, arg1, arg2, arg3, arg4, arg5);};
+
+        let currentLocale = i18n.getLocale();
+        let requestUrl = `../locale/${currentLocale}/${currentLocale}.json`;
+        let localeJson;
+        let fetchLocaleJson = fetch(requestUrl);
+        fetchLocaleJson.then((res)=>{
+            return res.json();
+        }).then((resJson)=>{
+            localeJson = resJson;
+            seti18n(localeJson);
+        });
+
+        function seti18n(jsonArg){
+            i18n.loadJSON(jsonArg, "messages");
+            let gettextEl, gettextArg, ngettextEl, ngettextArg;
+            gettextEl = document.querySelectorAll("[data-gettext]");
+            gettextEl.forEach( (eachEl) => {
+                gettextArg = eachEl.getAttribute("data-gettext").split(/,\s?/);
+                eachEl.innerHTML = _(eachEl.innerHTML, gettextArg[0], gettextArg[1], gettextArg[2], gettextArg[3], gettextArg[4]);
+            } );
+            ngettextEl = document.querySelectorAll("[data-ngettext]");
+            ngettextEl.forEach( (eachEl) => {
+                ngettextArg = eachEl.getAttribute("data-ngettext").split(/,\s?/);
+                eachEl.innerHTML = _n(eachEl.innerHTML, ngettextArg[0],ngettextArg[1],ngettextArg[2],ngettextArg[3],ngettextArg[4],ngettextArg[5]);
+            } );
+            
+        }
+
+
+
+
+
+        let fetchXml, xmlParser, parsedXml;
+        fetchXml = fetch("../components/headerandfooter.xml");
+        fetchXml.then((res)=>{
+            return res.text();
+        }).then((res)=>{
+            xmlParser = new DOMParser();
+            parsedXml = xmlParser.parseFromString(res, "text/xml"); 
+        });
+
+    </script>
+</body>
+</html>

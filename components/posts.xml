@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<root>
+    <posts year="2020">
+        <post date="2020-10-23T00:20:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body>
+                    <p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p>
+                </body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-22T17:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-21T00:20:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body>
+                    <p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p>
+                </body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-20T17:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-20T15:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! Dolores nam tempore id eum sapiente nulla beatae vero.</p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-19T00:20:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body>
+                    <p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p>
+                </body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-18T17:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-17T21:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! Dolores nam tempore id eum sapiente nulla beatae vero.</p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今日は例の場所まで行って例のイベントに参加した。代用文を記入して、コンテンツのプレースホルダーを作成した。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+    </posts>
+</root>

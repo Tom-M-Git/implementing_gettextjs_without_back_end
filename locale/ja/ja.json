@@ -1,0 +1,13 @@
+{
+    "": {
+        "language": "ja",
+        "plural-forms":"nplurals=2; plural=n>1;"
+    },
+    "Welcome":"ようこそ",
+    "There is %1 apple and %2 banana": "りんごが%1個とバナナが%2個あります",
+    "Hi":"やあ",
+    "There is %1 apple": [
+        "Il y a %1 pomme",
+        "Il y a %1 pommes"
+    ]
+}
