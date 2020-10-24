@@ -4,7 +4,7 @@ function postsJS(){
     fetchUrl = "components/posts.xml";
     xhr = new XMLHttpRequest();
     if( !(xhr.open("GET", fetchUrl, true)) ){
-        fetchUrl = "../"+fetchUrl;
+        fetchUrl = "../components/posts.xml";
     }
 
     fetchXml = fetch(fetchUrl);

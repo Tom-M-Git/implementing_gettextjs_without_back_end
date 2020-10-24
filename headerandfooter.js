@@ -4,7 +4,7 @@ function headerandfooterJs(){
     fetchUrl = "components/headerandfooter.xml";
     xhr = new XMLHttpRequest();
     if( !(xhr.open("GET", fetchUrl, true)) ){
-        fetchUrl = "../"+fetchUrl;
+        fetchUrl = "../components/headerandfooter.xml";
     }
 
     fetchXml = fetch(fetchUrl);
