@@ -13,6 +13,7 @@ function headerandfooterJs(){
         xmlParser = new DOMParser();
         parsedXml = xmlParser.parseFromString(res, "text/xml");
         loadComponents(parsedXml);
+        fixLinks();
     });
 
     function getHeader (arg) {
@@ -26,6 +27,22 @@ function headerandfooterJs(){
     function loadComponents (arg) {
         getHeader(arg);getFooter(arg);mediator.componentsAdded=1;
     }
+
+    /* Optional =============================== */
+    function fixLinks(){
+        const currentLocale = document.getElementsByTagName("html")[0].getAttribute("lang");
+        let hrefEn = document.querySelector("[href='../index.html']");
+        let hrefJa = document.querySelector("[href='ja/index.html']");
+        if(currentLocale == "en"){
+            hrefEn.removeAttribute("href");
+            hrefEn.className += " disabled"
+        }
+        if(currentLocale == "ja"){
+            hrefJa.removeAttribute("href");
+            hrefJa.className += " disabled"
+        }
+    }
+    /* =============================== */
 
 }
 headerandfooterJs();

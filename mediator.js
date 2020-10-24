@@ -3,7 +3,7 @@
     Load this js file before all components and a translation program loaded in an html file.
 */
 let mediator = {
-    "numOfComponentFiles": 1,
+    "numOfComponentFiles": 2,
     "componentsLoaded": 0,
     "listener": function(){},
     "registerListener": function(newListener){

@@ -3,7 +3,13 @@
         "language": "ja",
         "plural-forms":"nplurals=2; plural=n>1;"
     },
+    "Implementing Gettext.js Without Backend":"バックエンド無しでGettext.jsの実施",
+    "A mock website project":"模擬ウェブサイトプロジェクト",
+    "Current Date and Time:":"現在日付時刻:",
+    "Disabled":"利用不可",
+    "Tomoaki Morioka":"森岡 知映",
     "Welcome":"ようこそ",
+    "Posts":"記事",
     "There is %1 apple and %2 banana": "りんごが%1個とバナナが%2個あります",
     "Hi":"やあ",
     "There is %1 apple": [

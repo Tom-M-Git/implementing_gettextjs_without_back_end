@@ -20,11 +20,15 @@ function translationJs(){
         return res.json();
     }).then((resJson)=>{
         localeJson = resJson;
+        setGettext(localeJson);
         checkComponents(allTranslationFuncs);
-    });
+    }).then(()=>{createClock();});
 
     function setGettext(jsonArg){
         i18n.loadJSON(jsonArg, "messages");
+    }
+
+    function executeGettext(){
         let gettextEl, gettextArg, ngettextEl, ngettextArg;
         gettextEl = document.querySelectorAll("[data-gettext]");
         gettextEl.forEach( (eachEl) => {
@@ -39,7 +43,7 @@ function translationJs(){
         
     }
 
-    /* Start Translation =================== */
+    /* Date Translation =================== */
     function translateDate () {
 
         /* formatting the specified date */
@@ -48,15 +52,24 @@ function translationJs(){
             datesToFormat = document.querySelectorAll("[data-date]");
             datesToFormat.forEach((eachDate)=>{
                 dateValue = eachDate.getAttribute("data-date")
-                i18nDate = new Date(dateValue).toLocaleDateString(langAttr, {year:"numeric", month:"long", day: 'numeric'});
+                i18nDate = new Date(dateValue).toLocaleDateString(currentLocale, {year:"numeric", month:"long", day: 'numeric'});
                 eachDate.innerHTML = i18nDate;
             });
         }
         /* ----------------------------- */
     }
+
+    function createClock(){
+        let clock = document.getElementById("date-and-time");
+        setInterval(()=>{
+            let currentDate = new Date();
+            let formattedDate = currentDate.toLocaleDateString(currentLocale, {year:"numeric", month:"long", day: 'numeric', weekday:"long", hour: '2-digit', minute:"2-digit", second:"2-digit", hour12:"true"});
+            clock.innerHTML = formattedDate;
+        }, 1000);
+    }
     /* =================================== */
 
     function allTranslationFuncs(){
-        setGettext(localeJson);translateDate();
+        executeGettext();translateDate();
     }
 }
