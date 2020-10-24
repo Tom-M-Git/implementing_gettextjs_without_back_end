@@ -10,10 +10,7 @@ translationJs();
 function translationJs(){
     let currentLocale, requestUrl, fetchLocaleJson, localeJson;
     currentLocale = i18n.getLocale();
-    requestUrl = `locale/${currentLocale}/${currentLocale}.json`;
-    requestUrl = new XMLHttpRequest().open("GET", requestUrl, true)
-        ? requestUrl
-        : "../" + requestUrl;
+    requestUrl = `./locale/${currentLocale}/${currentLocale}.json`;
     fetchLocaleJson = fetch(requestUrl);
 
 
@@ -23,6 +20,16 @@ function translationJs(){
         localeJson = resJson;
         setGettext(localeJson);
         checkComponents(allTranslationFuncs);
+    }).catch(()=>{
+        requestUrl = `../locale/${currentLocale}/${currentLocale}.json`;
+        fetchLocaleJson = fetch(requestUrl);
+        fetchLocaleJson.then((res)=>{
+            return res.json();
+        }).then((resJson)=>{
+            localeJson = resJson;
+            setGettext(localeJson);
+            checkComponents(allTranslationFuncs);
+        });
     }).then(()=>{createClock();});
 
     function setGettext(jsonArg){
