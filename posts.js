@@ -1,10 +1,11 @@
 function postsJS(){
 
-    let fetchUrl, fetchXml, xmlParser, parsedXml;
+    let fetchUrl, fetchXml, xmlParser, parsedXml, xhr;
     fetchUrl = "components/posts.xml";
-    fetchUrl = new XMLHttpRequest().open("GET", fetchUrl, true)
-        ? fetchUrl
-        : "../"+fetchUrl;
+    xhr = new XMLHttpRequest();
+    if( !(xhr.open("GET", fetchUrl, true)) ){
+        fetchUrl = "../"+fetchUrl;
+    }
 
     fetchXml = fetch(fetchUrl);
     fetchXml.then((res)=>{
