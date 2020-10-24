@@ -1,7 +1,7 @@
 function headerandfooterJs(){
 
     let xhrUrl, parsedXml, xhr, xhrPromise;
-    xhrUrl = "components/headerandfooter.xml";
+    xhrUrl = "./components/headerandfooter.xml";
     xhr = new XMLHttpRequest();
     if( !(xhr.open("GET", xhrUrl, true)) ){
         xhrUrl = "../components/headerandfooter.xml";

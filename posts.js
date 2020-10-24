@@ -1,7 +1,7 @@
 function postsJS(){
 
     let xhrUrl, parsedXml, xhr, xhrPromise;
-    xhrUrl = "components/posts.xml";
+    xhrUrl = "./components/posts.xml";
     xhr = new XMLHttpRequest();
     if( !(xhr.open("GET", xhrUrl, true)) ){
         xhrUrl = "../components/posts.xml";
