@@ -1,5 +1,4 @@
 import Gettext from "./lib/gettext.js";
-import Gettext2 from "../lib/gettext.js";
 
 let i18n;
 i18n = Gettext ? new Gettext(): new Gettext2;
