@@ -1,6 +1,8 @@
-import Gettext from "../lib/gettext.js";
+import Gettext from "./lib/gettext.js";
+import Gettext2 from "../lib/gettext.js";
 
-let i18n = new Gettext();
+let i18n;
+i18n = Gettext ? new Gettext(): new Gettext2;
 let _ = (msgid, arg1, arg2, arg3, arg4, arg5)=>{return i18n.gettext(msgid, arg1, arg2, arg3, arg4, arg5);};
 let _n = (msgid, msgid_plural, arg1, arg2, arg3, arg4, arg5)=>{return i18n._n(msgid, msgid_plural, arg1, arg2, arg3, arg4, arg5);};
 

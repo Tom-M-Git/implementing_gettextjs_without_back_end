@@ -2,9 +2,9 @@ function headerandfooterJs(){
 
     let fetchUrl, fetchXml, xmlParser, parsedXml;
     fetchUrl = "components/headerandfooter.xml";
-    fetchUrl = new XMLHttpRequest().open("GET", fetchUrl, true)
-        ? fetchUrl
-        : "../"+fetchUrl;
+    if( !(new XMLHttpRequest().open("GET", fetchUrl, true)) ){
+        fetchUrl = "../"+fetchUrl;
+    }
 
     fetchXml = fetch(fetchUrl);
     fetchXml.then((res)=>{
