@@ -1,2 +1,2 @@
-# Learning implementing XML with AJAX alongside i18n (gettext.js)
-Creating multiple web components in __xml__ and loading into DOM, learning to handle seperate js files with multiple __AJAX__, while also testing __i18n__ with library `gettext.js`.
+# Learning gettext.js to perform i18n without backed, with XML components with AJAX
+Testing an __i18n__ library `gettext.js` wihtout backend to achieve __i18n__ while also using multiple __XML__ components (AJAX).
