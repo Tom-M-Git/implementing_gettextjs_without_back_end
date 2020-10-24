@@ -3,9 +3,6 @@ function headerandfooterJs(){
     let xhrUrl, parsedXml, xhr, xhrPromise;
     xhrUrl = "./components/headerandfooter.xml";
     xhr = new XMLHttpRequest();
-    if( !(xhr.open("GET", xhrUrl, true)) ){
-        xhrUrl = "../components/headerandfooter.xml";
-    }
     xhrPromise = new Promise((resolve, reject)=>{
         xhr.onload = () => {
             resolve(xhr.responseXML);
@@ -19,6 +16,20 @@ function headerandfooterJs(){
         parsedXml = res;
         loadComponents(parsedXml);
         fixLinks();
+    }).catch(()=>{
+        xhrUrl = "../components/headerandfooter.xml";
+        xhrPromise = new Promise((resolve, reject)=>{
+            xhr.onload = () => {
+                resolve(xhr.responseXML);
+            };
+            xhr.open("GET", xhrUrl, true);
+            xhr.send();
+        });
+        xhrPromise.then((res)=>{
+            parsedXml = res;
+            loadComponents(parsedXml);
+            fixLinks();
+        });
     });
 
     function getHeader (arg) {
