@@ -19,6 +19,19 @@ function postsJS(){
         parsedXml = res;
         loadComponents(parsedXml);
 
+    }).catch(()=>{
+        xhrUrl = "../components/posts.xml";
+        xhrPromise = new Promise((resolve, reject)=>{
+            xhr.onload = () => {
+                resolve(xhr.responseXML);
+            };
+            xhr.open("GET", xhrUrl, true);
+            xhr.send();
+        });
+        xhrPromise.then((res)=>{
+            parsedXml = res;
+            loadComponents(parsedXml);
+        });
     });
 
     let mainEl, postSection;
