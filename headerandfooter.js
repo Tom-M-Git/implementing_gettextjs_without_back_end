@@ -49,9 +49,13 @@ function headerandfooterJs(){
         const currentLocale = document.getElementsByTagName("html")[0].getAttribute("lang");
         let hrefEn = document.querySelector("[href='../index.html']");
         let hrefJa = document.querySelector("[href='ja/index.html']");
+        let iconSrc = document.querySelector("[src^='..']");
+        let iconSrcAttr = iconSrc.getAttribute("src");
+        let newIconSrc = iconSrcAttr.replace(/^../, ".");
         if(currentLocale == "en"){
             hrefEn.removeAttribute("href");
-            hrefEn.className += " disabled"
+            hrefEn.className += " disabled";
+            iconSrc.setAttribute("src", newIconSrc);
         }
         if(currentLocale == "ja"){
             hrefJa.removeAttribute("href");
