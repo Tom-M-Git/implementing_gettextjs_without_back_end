@@ -29,7 +29,7 @@ function translationJs(){
             localeJson = resJson;
             setGettext(localeJson);
             checkComponents(allTranslationFuncs);
-        });
+        }).then(()=>{createClock();});
     }).then(()=>{createClock();});
 
     function setGettext(jsonArg){
